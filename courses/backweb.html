@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/functions.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+   			<div class="row"><a href="./sample-eng.html">English Version</a></div>
+            <div class="row"><center><h1>Web Development</h1></center></div>
+            <div class="row">
+            	<h2>II-BACK-END :</h2>
+            	<div class="col-lg-12">
+
+            		<img src="res/cycle.png" width="100%" alt="">
+            	</div>
+            </div><br>
+            <div class="row" id="PHP">
+            	<h2>1- PHP :</h2>
+            	<p>
+            		avec HTML, CSS et Javascript, tnajim ta3mil ce qui est appelé "site statique", le problème m3a les sites statiques howa anou lezim inti tiktib kol chay, donc ken 3andik page feha 50 membres, tiktib le code 50 mara.
+            		zeda ken t7ib chkoun ya3mil inscription wala yab3ith message min formulaire, mayitsajal chay.
+            		bich nirte7ou mil mechekil edhika, nista3mlou 7aja ismha "back-end", li hiya bich tkhalina nsajlou les informations te3na.
+
+            		Le language back-end li bich nit3almouh ismou PHP, w howa bich ikhalina on communique mabin il site web mte3na wil base de données win fama toutes nos informations.
+
+            		Pour le moment ena en période de devoirs donc najamch niktib le cours complet, donc bich na3tikom il video hedhi tit3almou minha pour le moment, ena bidi t3alamt min houni donc ken itab3ouh oumourkom twali henia. <br><br>
+            		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/qVU3V0A05k8" frameborder="0" allowfullscreen></iframe></center><br>
+            		
+					
+               	</p>
+            </div>
+            <div class="row" id="SQL">
+            	<h2>2- SQL :</h2>
+            	<p>
+            		HTML + CSS + JS ya3mloulna site web. <br>
+            		PHP howa il 9antra mabin site web te3na wil base de donnée. <br>
+            		SQL howa li ikhalina on manipule il base de donnée, howa li bich ikhalina nzidou information, nfaskhou information, nbadlou information, wala juste njiboha w n'affichiwha. <br> <br>
+            		à la base  une base de donnée hiya table Excel kbira, barcha des lignes et des colonnes winti tistakhrij ma3loumet. <br>
+            		Fil SQL 3ana 4 commandes : <br><br>
+
+					<ul>
+						<li>	SELECT - hedhi tistakhrij des informations <br></li>
+						<li>UPDATE - hedhi tmodifie des informations <br></li>
+						<li>INSERT - hedhi tzid des informations <br></li>
+						<li>DELETE - hedhi tfasikh des informations <br></li>
+					</ul>
+
+            		<br><h2>na3mlou exemple :</h2><br>
+
+            		<div class="row">
+	            		<div class="col-lg-7">
+	            			Supposons il tableau li 3al imin howa il base de donnée te3na. <br>
+							ismou "TEAM", fih 3 champs ( 'name' , 'age' , 'location' ), w fih déjà 2 lignes d'informations. <br>
+
+							Si ena 3andi une page Web ismha "The Team", w n7ib j'affiche les membres, alors lezim njib mes informations mil base de donnée, dans ce cas je fais : <br><br>
+
+							<strong>SELECT * FROM Team;</strong> <br><br>
+
+							Il requête SQL hedhi  bich traja3li les informations lkol li fil base de donnée.
+							traja3li donc elyes, 21, Marsa, Hamza, 23, Tunis  wena bil PHP n'affichihom kima n7ib.
+							Ken n7ib  njib info mou3ayna na3ti ism il champ fi 3oudh l'étoile *. <br> <br>
+
+							<strong>SELECT Name,Age From Team  </strong> => traj3ilna Elyes,21,Hamza,23 <br><br>
+
+							il Location maraj3itch, de cette façon je choisis chnaw n7ib njib, w ken n7ib kol chay, n7ot étoile * .<br><br>
+	            		</div>
+	            		<div class="col-lg-offset-1  col-lg-4">
+	            		<br><br><br>
+	            			<table>
+	            			<tr>
+	            				<th>Name</th>
+	            				<th>Age</th>
+	            				<th>Location</th>
+	            			</tr>
+	            			<tr>
+	            				<td>Elyes</td>
+	            				<td>21</td>
+	            				<td>Marsa</td>
+	            			</tr>
+	            			<tr>
+	            				<td>Hamza</td>
+	            				<td>23</td>
+	            				<td>Tunis</td>
+	            			</tr>
+	            		</table><br>
+	            		</div>
+            		</div>
+            		
+					<hr>
+					<br><br>
+					<div class="row">
+						<div class="col-lg-7"><br><br>
+							Ken n7ib nbadil information, exemple nbadil age ta3 elyes, na3mil : <br><br>
+							<strong>UPDATE Age WHERE Name=elyes Set Age=45;</strong><br><br>
+							Age ta3 elyes wala 45, na3mlou nafs chay li ay champs, just badil Set Age bi ay champ ekhir.
+							Il WHERE  hiya li condition te3na,  bich tbadil information mta3 chkoun bidhet? ta3 li Name te3ou howa Elyes. <br><br>
+
+						</div>
+						<div class="col-lg-offset-1 col-lg-4">	
+							<br><table>
+		            			
+		            			<tr>
+		            				<th>Name</th>
+		            				<th>Age</th>
+		            				<th>Location</th>
+		            			</tr>
+		            			<tr>
+		            				<td>Elyes</td>
+		            				<td>45</td>
+		            				<td>Marsa</td>
+		            			</tr>
+		            			<tr>
+		            				<td>Hamza</td>
+		            				<td>23</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            		</table><br>
+						</div>
+					</div>
+
+					<br><br><br>
+					<div class="row">
+						<div class="col-lg-7"><br><br>
+							Ken n7ibou nzidou 3abd, na3mlou <br><br>
+
+							<strong>INSERT INTO Team(yosr,20,Tunis);</strong> <br><br>
+
+							Zidna un membre jdid ismou yosr, 3omrou 20 w yoskin fi tounis. <br>
+							****ATTTENTION****** <br>
+							Fil cas hedha l'ordre 3andou dakhl, lezim tu respectes l'ordre des champs, since bdineha avec name ba3d age ba3d location lezim nkamlou keka. <br>
+							****ATTENTION**** <br>
+
+							tawa il base te3na walet haka : <br>
+						</div>
+						
+						<div class="col-lg-offset-1 col-lg-4">
+							<table>
+            			
+		            			<tr>
+		            				<th>Name</th>
+		            				<th>Age</th>
+		            				<th>Location</th>
+		            			</tr>
+		            			<tr>
+		            				<td>Elyes</td>
+		            				<td>21</td>
+		            				<td>Marsa</td>
+		            			</tr>
+		            			<tr>
+		            				<td>Hamza</td>
+		            				<td>23</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            			<tr>
+		            				<td>yosr</td>
+		            				<td>20</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            		</table>
+						</div>
+					</div>
+
+					<br><br><br>
+					<div class="row">
+						<div class="col-lg-7">
+							<br>
+
+		            		Ken n7ibou nfaskhou elyes, na3mlou <br><br>
+
+		            		<strong>DELETE FROM TEAM WHERE name=elyes;</strong><br><br>
+
+		            		9olnelou fasikh mil base li ismha TEAM, il 3abd li ismou elyes. donc tawa table walet haka : 
+
+						</div>
+						<div class="col-lg-offset-1 col-lg-4">
+							<table>
+		            			<tr>
+		            				<th>Name</th>
+		            				<th>Age</th>
+		            				<th>Location</th>
+		            			</tr>
+		            			<tr>
+		            				<td>Hamza</td>
+		            				<td>23</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            			<tr>
+		            				<td>yosr</td>
+		            				<td>20</td>
+		            				<td>Tunis</td>
+		            			</tr>
+		            		</table>
+
+						</div>
+					</div>
+					
+				
+            	</p>
+            </div>
+
+            <div class="row" id="PHP + SQL">
+            	<h2>3- PHP + SQL :</h2>
+            	<p>
+            		tawa ritou il PHP w ritou il SQL,  bich nista3mlou les 2 m3a b3athhom taw : <br>
+
+            		Pour faire cela,  nist7a9ou 7ajtin: <br> <br>
+            			-fichier de configuration base de donnée <br>
+            			-fonctions PHP ta3 base donnée <br>
+
+            		Bich nibdew, ken 3andik projet bditou fih en php ikhdmou fih, sinon  a3mlou dossier jdid w a3mlou fih fichier "index.php"
+            		Rakzou m3a ".php" mouch ".html" khatir le code PHP yikhdimch fi fichier HTML ama code HTML yikhdim fi fichier PHP. <br>
+
+            		donc, fil dossier te3kom tawa 3andkom fichier index.php , na3mlou fi nafs il dossier fichier we7id ekhir ismou "database.php" w na3mlou copier coller fi wistou ta3 le code hedha : <br> 
+
+					<div class="col-lg-offset-3">
+						<small>
+						&lt;?php  <br>
+							class Database<br>
+							{<br>
+							    private static $dbName =  ;<br>
+							    private static $dbHost =  ;<br>
+							    private static $dbUsername = ;<br>
+							    private static $dbUserPassword =  ;<br>
+							     
+							    private static $cont  = null;<br>
+							     
+							    public function __construct() {<br>
+							        die('Init function is not allowed');<br>
+							    }
+							     
+							    public static function connect()<br>
+							    {<br>
+							       // One connection through whole application<br>
+							       if ( null == self::$cont )<br>
+							       {     <br>
+							        try<br>
+							        {<br>
+							          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); <br>
+							        }
+							        catch(PDOException $e)<br>
+							        {<br>
+							          die($e->getMessage()); <br>
+							        }
+							       }
+							       return self::$cont;<br>
+							    }
+							     
+							    public static function disconnect()<br>
+							    {<br>
+							        self::$cont = null;<br>
+							    }<br>
+							    public function display(){<br>
+							    }<br>
+							}?><br>
+					</small>
+					</div>
+					
+					<br><br>
+					hedha il fichier de configuration te3na, ikhalina nconnectiw mil fichier te3na 3al base de donnée win makenit.
+					a7na bich nkhaliwha kima hiya ama nbadlou fi 4 7ajet : <br>
+						<ul>
+							<li>private static $dbName, hedhi n7otouha égale li ism il base de donnée te3na.</li>
+							<li>private static $dbHost, hedhi n7otohuha égale li ism il serveur, ken 3al pc te3na n7otou "localhost", ken 3ala serveur distant ya3tihelik il hébergeur te3ik.</li>
+							<li>private static $dbUsername, username te3ik</li>
+							<li>private static $dbUserPassword, hedhi t7ot feha mot de passe li tconnecti bih.</li>
+						</ul>
+					
+<br>
+					Une fois hedha c'est bon, narj3ou lil index.php te3na. Supposons 3ana fil base de donnée une table ismha "users", wena n7ib lista ta3 esemi il users te3i, nji fil index.php w niktib  le code suivant : <br>
+					<div class="col-lg-offset-3"><br><br>
+						<small>
+							
+							&lt;?php <br>
+							require 'database.php';  <br>
+	                        $pdo = Database::connect();<br>
+	                        $sql = "SELECT * FROM users  ORDER BY name ASC "; : <br>
+	                        foreach ($pdo->query($sql) as $row) {<br>
+	                            echo $row['name'];<br>
+	                        }<br>
+	                        Database::disconnect();<br>
+	                    	?> <br>
+	                    	
+                    	</small><br>
+					
+					</div>
+
+					houni cha3mlna : <br>
+					<ol>
+						<li><?php : kima <code><!DOCTYPE html></code> , hedhi bich t9oul rani nista3mil fil php</li>
+						<li>require 'database.php' : il fichier li ktibneh 9bila, njibouh bich najmou nista3mlouh, ken na3mlouch hedha mayikhdimch code te3na </li>
+						<li>$pdo = Database::connect() : hedhi ya3ni 3malna une connection vers la base de donnée te3na, la fonction utilisée ismha connect() w jibneha mil fichier database.php .   tawa najmou nistghalou les informations li fil base de donnée.</li>
+						<li>$sql = "SELECT * FROM users  ORDER BY name ASC " : houni 7atina la requête SQL te3na li bich tkhalina njibou les informations mil table users li fil base de donnée, w nadhmouhom selon ismhom. </li>
+						<li>foreach ($pdo->query($sql) as $row) { echo $row['name'];} :  houni 9olna li pour chaque résultat nal9awih, donc pour chaque user mawjoud fil base de donnée, iktibli ismou fil site web te3i.</li>
+						<li>Database::disconnect() : hedhi 7atineha filikhir bich nsakrou la connection lil base, na3mloha 3al sécurité w bich tekilch b3athha ken 3ana barcha des appels okhrin.</li>
+
+					</ol><br>
+						
+					En général, kol mara bich tist7a9ou lil base de donnée bich tiktbou NAFS le code, sauf les lignes 4 et 5 win tbadlou la requête w chnaw ta3mlou pour chaque résultat. <br>
+
+					<center><h2>Jarbou taw avec SELECT, INSERT, UPDATE et DELETE. </h2><br></center>
+							
+							<p>
+								<strong>INSERT :</strong>  <br>
+								$pdo = Database::connect(); <br>
+					            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); <br>
+					            $sql = "INSERT INTO sites (sname) values(?)"; <br>
+					            $q = $pdo->prepare($sql); <br>
+					            $q->execute(array($name)); <br>
+           						Database::disconnect(); <br>
+							</p>
+
+							<p>
+								<strong>DELETE :</strong> <br>
+								    $pdo = Database::connect(); <br>
+							        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>
+							        $sql = "DELETE FROM sites  WHERE sid = ?";<br>
+							        $q = $pdo->prepare($sql);<br>
+							        $q->execute(array($id));<br>
+							        Database::disconnect();<br>
+							</p>
+
+					
+            			
+
+
+            		
+
+            	</p>
+            </div>
+            <div class="row" id="projet">
+            	<h2>Projet :</h2>
+            	<p>Tawa ki walitou ta3rfou les bases ta3 il programmation web,  bich tikhdmou votre propre projet. <br>
+            	Projet te3kom inajim ikoun site vitrine, site dynamique, application web symple...  ama 7aja mouch kbira barcha, mouch facebook wala tayara.tn <br>
+            	donc les étapes à faire tawa houma : <br>
+            	<ol>
+            		<li>Recherche d'idée, lezim tal9a idée ta3 projet, mouch lezim 7aja avancé, mouhim 7aja tpratiqui 3leha li 9ritou.</li>
+            		<li>mini cahier des charges, c'est just fichier texte (notepad wala word) fih projet te3ik chismou, chya3mil, chnaw fih, 9adeh min pages... bich tkoun </li>
+            		<li>Mockup, wili howa juste tekhou war9a w tkharbich il projet te3ik li chnawa ichabah.  Juste ta3mil mourab3at w dwir</li>
+            		<li>ta3mil il squelette ta3 site te3ik  avec bootstrap, tista3mil les row et col  bich ta3mil 7aja fisa3 fisa3,  w e9if fil squelette khatir il zina tekhou baaaaarcha wa9t bich titgad bil gdé.</li>
+            		<li>une fois il squelette tgad, a3mil khidmit il base de donnée ken 3andik base de donnée, il php ken 3andik calcul w formulaire, il Javascript ken 3andik intéraction...   il lob ya3ni. khatir il mouhim filikhir anou projet te3ik yikhdim.</li>
+            		<li>kamil il zina</li>
+            		<li>TA-DA!  kamalt projek, mabrouk</li>
+            	</ol>
+            	projet hedha c'est 80% 3likom intom, istghalou ay resource ritoha wala mawjouda, ista3mlou ay 7aja 9rineha wala rineha 7ata taw. <br>
+            	ena bich nidakhil ken bich n9olkom chnaw ta3mlou  w chnaw mata3mlouch, ama lezim intouma tit3almou projet réel kifeh. <br>
+            	bien sur ken birasmi w7iltou n3awin ena. <br>
+            	ken fi wist il jim3a we7lin fi 7aja contactiwni : Manai.elye2s@gmail.com <br>
+            	GOOD LUCK ! <br>
+            	</p>
+            </div>
+            <div class="row" id="annexes">
+            	<h2> Annexes :</h2>
+            	<p>Définitions:
+					<ul>
+						<li></li>
+					</ul>
+            	</p>
+            	<p>blayis behin ta3 recherche : 
+            		<ul>
+            			<li>Google, akbir moteur de recherche fil 3alim, of course bich tal9a houni ijeba</li>
+            			<li>Stackoverflow, akbir forum ta3 développement fil 3alim, famech développeur yista3malch il site hedha</li>
+            			<li>W3schools, perfect bich tibda bih il Web, fih ay élément t7ib 3lih</li>
+            		</ul>
+            	</p>
+            </div>
+
+            
+                        
+<p>
+<?php
+session_start();
+$username = $_POST['username'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+
+if (empty($username)) {
+    header("location: index.php?error=empty");
+    exit();}
+
+if (empty($email)) {
+    header("location: index.php?error=empty");
+    exit();}
+if (empty($password)) {
+    header("location: index.php?error=empty");
+    exit();}
+
+//establishing connction to the database
+$conn = mysqli_connect('localhost','root','', 'ged');
+if (!$conn) {die("connection failed:".mysqli_connect_error());}
+
+$sql = "INSERT INTO test (id, name)  
+VALUES ('$id','$username')";
+if (mysqli_query($conn, $sql)) {header("location: index.php?error=success");}
+ else {echo "Error: " . $sql . "<br>" . mysqli_error($conn);}
+
+mysqli_close($conn);
+?>
+
+
+
+//checking if the name already exists
+$sql= "SELECT name FROM users WHERE name='$username'";
+$result= $conn -> query($sql);
+$namecheck = mysqli_num_rows($result);
+if ($namecheck > 0) {
+    header("location: index.php?error=exist");
+    exit();
+}
+
+
+?>
+</p>
+
+           
+        </div>
+
+</body>
+</html>

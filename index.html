@@ -1,0 +1,185 @@
+-<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
+
+    	<script src="js/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+            $( function() {
+                $( ".sortable" ).sortable();
+                $( ".sortable" ).disableSelection();
+            } );
+        </script>
+
+    </head>
+    
+    <body>
+        <div class="container">
+          <div class="row" ><div class="col-lg-4"><h1>To read next</h1></div></div>
+          <div class="row sortable" id="displaytosee">
+          </div>
+        </div>
+        
+
+        <div class="container">
+          <div class="row" >
+            <div class="col-lg-4">
+              <h1>Knowledge base</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" >
+
+            <div class="row sortable" id="domains" >
+              <div class="col-lg-3 card" id="it">
+                <img class="card-img-top" width="100%" src="res/aa.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">IT</h4>
+                 <center> 
+                    <a href="course.html" class="btn btn-danger">Access</a>
+                    <button class="btn btn-success add" id="aa" >Add to List</button>
+                    <button class="btn btn-default remove" id="aa">Done</button>
+                  </center>
+                </div>
+              </div>
+
+               <div class="col-lg-3 card" id="it">
+                <img class="card-img-top" width="100%" src="res/aa.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Business</h4>
+                 <center> 
+                    <a href="course.html" class="btn btn-danger">Access</a>
+                    <button class="btn btn-success add" id="aa" >Add to List</button>
+                    <button class="btn btn-default remove" id="aa">Done</button>
+                  </center>
+                </div>
+              </div>
+
+               <div class="col-lg-3 card" id="it">
+                <img class="card-img-top" width="100%" src="res/aa.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">General</h4>
+                 <center> 
+                    <a href="course.html" class="btn btn-danger">Access</a>
+                    <button class="btn btn-success add" id="aa" >Add to List</button>
+                    <button class="btn btn-default remove" id="aa">Done</button>
+                  </center>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="row sortable courses" id="it-courses">
+              <div class="col-lg-3 card">
+                <img class="card-img-top" width="100%" src="res/frontweb.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Front-End Web</h4>
+                 <center> 
+                    <a href="https://elyesmanai.github.io/sample/" class="btn btn-danger">Access</a>
+                    <button class="btn btn-success add" id="frontweb" >Add to List</button>
+                    <button class="btn btn-default remove" id="frontweb">Done</button>
+                  </center>
+                </div>
+              </div>
+
+              <div class="col-lg-3 card">
+                <img class="card-img-top" width="100%" src="res/backweb.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Back-End Web</h4>
+                 <center> 
+                    <a href="https://elyesmanai.github.io/sample/" class="btn btn-danger">Access</a>
+                    <button class="btn btn-success add" id="backweb" >Add to List</button>
+                    <button class="btn btn-default remove" id="backweb">Done</button>
+                  </center>
+                </div>
+              </div>
+            
+            </div>
+
+        </div>
+
+        <div class="container">
+          <div class="row" ><div class="col-lg-4"><h1>Seen</h1></div></div>
+          <div class="row" id="displayseen"></div>
+        </div>
+
+
+
+    </body> 
+        <script>
+          $( document ).ready(function() {
+              display();
+          });
+
+          $(".add").click(function(){
+            var key = $(this).attr('id');
+            var value = 1;
+
+            localStorage.setItem(key,value);
+
+            display();
+            key = "";
+            value = "";
+          });
+
+
+          $(".remove").click(function(){
+            var key = $(this).attr('id')
+            var value = 2;
+
+            localStorage.setItem(key,value);
+
+            display();
+             key = "";
+            value = "";
+          });
+
+          function display(){
+            console.log("hhhhhhhhhh");
+             var list = "";
+                var list2 = "";
+   
+                $("#displaytosee").html("");
+                $("#displayseen").html("");
+
+
+            for (var i = 0; i<localStorage.length  ; i++) {
+            
+
+
+                var key = localStorage.key(i);
+                
+                if(localStorage.getItem(key)=="1"){   
+                  // $("#displaytosee").append( "<p>"+key+"</p>" );*
+                  $("#displaytosee").append('<div class="col-lg-3 card"><img class="card-img-top" width="100%" src="res/'+key+'.jpg" alt="Card image cap"><div class="card-block"><h4 class="card-title">'+key+'</h4><center> <a href="'+key+'.html" class="btn btn-danger">Access</a><button class="btn btn-success add" id="'+key+'" >Add to List</button><button class="btn btn-default remove" id="'+key+'">Done</button></center></div></div>');
+                }
+
+                 if(localStorage.getItem(key)=="2"){ 
+                  var list2 = list + key + "<br>"    ;
+                   $("#displayseen").append('<div class="col-lg-3 card"><img class="card-img-top" width="100%" src="res/'+key+'.jpg" alt="Card image cap"><div class="card-block"><h4 class="card-title">'+key+'</h4><center> <a href="'+key+'.html" class="btn btn-danger">Access</a><button class="btn btn-success add" id="'+key+'" >Add to List</button><button class="btn btn-default remove" id="'+key+'">Done</button></center></div></div>');
+                }
+            }
+          };
+
+          $("#it").click(function(){
+            $("#domains").hide();
+            $("#it-courses").show();
+          });
+
+
+        </script>
+</html>
